@@ -1,0 +1,76 @@
+/* ==========================================================================
+   IDS Colleges Student Services Queue — Responsive Rules
+   ========================================================================== */
+
+/* Desktop Large Split Grids */
+@media (min-width: 992px) {
+  .login-split-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .login-hero-aside {
+    display: none;
+  }
+
+  .ids-header .navbar-collapse {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-top: 1px solid var(--ids-slate-100);
+    margin-top: 0.5rem;
+  }
+
+  .ids-header .ids-nav-link {
+    width: 100%;
+    padding: 0.75rem 0.875rem;
+  }
+}
+
+/* Tablet & Mobile Refinements */
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-card {
+    padding: 1.25rem;
+  }
+
+  .hero-card-backdrop {
+    inset: -0.75rem;
+  }
+
+  .ids-form-card {
+    padding: 1.35rem;
+  }
+
+  .office-choice-card {
+    min-height: 150px;
+  }
+
+  .ticket-number-xl {
+    font-size: 3.25rem;
+  }
+
+  .display-now-serving {
+    padding: 1.75rem 1rem;
+  }
+}
+
+/* Extra-small screens */
+@media (max-width: 479.98px) {
+  .brand-subtitle {
+    display: none;
+  }
+
+  .ids-heading-hero {
+    font-size: 2.35rem;
+  }
+
+  .btn-ids-primary,
+  .btn-ids-outline {
+    width: 100%;
+  }
+}

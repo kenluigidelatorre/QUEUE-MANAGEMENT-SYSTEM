@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Staff Login — IDS Colleges</title>
+    <meta
+      name="description"
+      content="Staff login portal for managing Registrar and Cashier student service queues at IDS Colleges."
+    />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+
+    <!-- Bootstrap 5 & Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Typography & Project Stylesheets -->
+    <link rel="stylesheet" href="../assets/fonts/manrope.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="page-staff" data-page="login">
+    <!-- Top Sticky Navigation -->
+    <header class="ids-header">
+      <nav class="navbar navbar-expand-lg py-0" aria-label="Primary navigation">
+        <div class="container-xl ids-header-inner px-3 px-lg-4">
+          <a href="../index.html" class="brand-lockup" aria-label="Go to home">
+            <img
+              src="../assets/images/ids-colleges-logo.png"
+              alt="IDS Colleges official seal"
+              class="brand-seal"
+            />
+            <div>
+              <p class="brand-title">IDS COLLEGES</p>
+              <p class="brand-subtitle">INFOTECH DEVELOPMENT SYSTEM</p>
+            </div>
+          </a>
+
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#idsMainNav"
+            aria-controls="idsMainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="idsMainNav">
+            <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-1 gap-lg-2 py-2 py-lg-0">
+              <a href="./student-queue.html" class="ids-nav-link" data-nav-page="student">
+                <i class="bi bi-person"></i>
+                <span>Student Queue</span>
+              </a>
+              <a href="./staff-login.html" class="ids-nav-link active" data-nav-page="login">
+                <i class="bi bi-shield-check"></i>
+                <span>Staff Login</span>
+              </a>
+              <a href="./public-display.html" class="ids-nav-link" data-nav-page="display">
+                <i class="bi bi-display"></i>
+                <span>Public Display</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Split Login View -->
+    <main class="login-split-grid">
+      <!-- Left Branding Panel (Desktop) -->
+      <aside class="login-hero-aside">
+        <div class="brand-lockup inverted">
+          <img
+            src="../assets/images/ids-colleges-logo.png"
+            alt="IDS Colleges official seal"
+            class="brand-seal brand-seal-lg"
+          />
+          <div>
+            <p class="brand-title" style="font-size: 0.875rem;">IDS COLLEGES</p>
+            <p class="brand-subtitle">INFOTECH DEVELOPMENT SYSTEM</p>
+          </div>
+        </div>
+
+        <div style="max-width: 28rem;">
+          <div
+            class="d-grid place-items-center rounded-4"
+            style="width: 56px; height: 56px; background-color: rgba(255, 255, 255, 0.1); display: grid; place-items: center;"
+          >
+            <i class="bi bi-shield-check fs-3 text-white"></i>
+          </div>
+          <h1 class="mt-4 mb-0 fw-extrabold text-white" style="font-size: 2.25rem; line-height: 1.2; font-weight: 800;">
+            Manage student services with confidence.
+          </h1>
+          <p class="mt-3 mb-0" style="font-size: 0.875rem; line-height: 1.75; color: rgba(220, 252, 231, 0.78);">
+            Secure staff access for managing office queues, serving students, and reviewing daily transactions.
+          </p>
+        </div>
+
+        <p class="mb-0" style="font-size: 0.75rem; color: rgba(187, 247, 208, 0.55);">
+          Authorized IDS Colleges personnel only
+        </p>
+      </aside>
+
+      <!-- Right Login Card Section -->
+      <section class="d-flex align-items-center justify-content-center px-3 py-5">
+        <form id="staffLoginForm" class="ids-form-card w-100" style="max-width: 28rem;" novalidate>
+          <div class="d-lg-none mb-4">
+            <div class="brand-lockup">
+              <img
+                src="../assets/images/ids-colleges-logo.png"
+                alt="IDS Colleges official seal"
+                class="brand-seal brand-seal-lg"
+              />
+              <div>
+                <p class="brand-title" style="font-size: 0.875rem;">IDS COLLEGES</p>
+                <p class="brand-subtitle">INFOTECH DEVELOPMENT SYSTEM</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ids-kicker mb-0">Staff portal</p>
+          <h2 class="mt-2 mb-0 fw-extrabold" style="font-size: 1.875rem; font-weight: 800; color: #174b2b;">
+            Welcome back
+          </h2>
+          <p class="mt-2 mb-0" style="font-size: 0.875rem; color: #64748b;">
+            Sign in to manage your office queue.
+          </p>
+
+          <div class="mt-4 d-flex flex-column gap-3">
+            <div>
+              <label for="staffEmail" class="form-label fw-bold mb-2" style="font-size: 0.875rem; color: #334155;">
+                Email address
+              </label>
+              <div class="ids-input-group">
+                <i class="bi bi-envelope ids-input-icon"></i>
+                <input
+                  id="staffEmail"
+                  type="email"
+                  class="ids-input"
+                  placeholder="name@school.edu"
+                  autocomplete="username"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="staffPassword" class="form-label fw-bold mb-2" style="font-size: 0.875rem; color: #334155;">
+                Password
+              </label>
+              <div class="ids-input-group">
+                <i class="bi bi-lock ids-input-icon"></i>
+                <input
+                  id="staffPassword"
+                  type="password"
+                  class="ids-input has-toggle"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                />
+                <button
+                  id="togglePasswordBtn"
+                  type="button"
+                  class="btn btn-link position-absolute end-0 top-50 translate-middle-y text-decoration-none pe-3"
+                  style="color: #64748b;"
+                  aria-label="Show password"
+                >
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p
+            id="staffLoginError"
+            role="alert"
+            class="d-none mt-3 mb-0 rounded-3 px-3 py-2 fw-semibold"
+            style="background-color: #fef2f2; color: #b91c1c; font-size: 0.75rem;"
+          ></p>
+
+          <button id="staffLoginSubmitBtn" type="submit" class="btn-ids-primary w-100 mt-4">
+            <span>Sign in</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Bootstrap 5 Bundle & Application Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../js/api/api.js" defer></script>
+    <script src="../js/services/queueService.js" defer></script>
+    <script src="../js/services/authService.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/validation.js" defer></script>
+    <script src="../js/interactions.js" defer></script>
+  </body>
+</html>

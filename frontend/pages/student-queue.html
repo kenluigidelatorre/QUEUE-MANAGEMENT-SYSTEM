@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Queue — IDS Colleges</title>
+    <meta
+      name="description"
+      content="Request a student queue ticket for Registrar or Cashier services at IDS Colleges."
+    />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+
+    <!-- Bootstrap 5 & Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Typography & Project Stylesheets -->
+    <link rel="stylesheet" href="../assets/fonts/manrope.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body class="page-student" data-page="student">
+    <!-- Top Sticky Navigation -->
+    <header class="ids-header">
+      <nav class="navbar navbar-expand-lg py-0" aria-label="Primary navigation">
+        <div class="container-xl ids-header-inner px-3 px-lg-4">
+          <a href="../index.html" class="brand-lockup" aria-label="Go to home">
+            <img
+              src="../assets/images/ids-colleges-logo.png"
+              alt="IDS Colleges official seal"
+              class="brand-seal"
+            />
+            <div>
+              <p class="brand-title">IDS COLLEGES</p>
+              <p class="brand-subtitle">INFOTECH DEVELOPMENT SYSTEM</p>
+            </div>
+          </a>
+
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#idsMainNav"
+            aria-controls="idsMainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="idsMainNav">
+            <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-1 gap-lg-2 py-2 py-lg-0">
+              <a href="./student-queue.html" class="ids-nav-link active" data-nav-page="student">
+                <i class="bi bi-person"></i>
+                <span>Student Queue</span>
+              </a>
+              <a href="./staff-login.html" class="ids-nav-link" data-nav-page="login">
+                <i class="bi bi-shield-check"></i>
+                <span>Staff Login</span>
+              </a>
+              <a href="./public-display.html" class="ids-nav-link" data-nav-page="display">
+                <i class="bi bi-display"></i>
+                <span>Public Display</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Student Queue Content -->
+    <main class="main-viewport py-5 px-3">
+      <!-- Step 1: Queue Request Form -->
+      <section id="studentFormView" class="mx-auto" style="max-width: 56rem;">
+        <div class="text-center mb-4 pb-2">
+          <span class="ids-kicker">Student queue</span>
+          <h1 class="ids-heading-page mt-3 mb-0">How can we help you today?</h1>
+          <p class="mt-3 mb-0" style="font-size: 0.975rem; color: #64748b;">
+            Enter your details and choose the office you need to visit.
+          </p>
+        </div>
+
+        <form id="studentQueueForm" class="ids-form-card" novalidate>
+          <div class="mb-4">
+            <label
+              for="studentName"
+              class="form-label fw-bold mb-2"
+              style="font-size: 0.875rem; color: #334155;"
+            >
+              Full name
+            </label>
+            <div class="ids-input-group">
+              <i class="bi bi-person ids-input-icon fs-5"></i>
+              <input
+                id="studentName"
+                type="text"
+                class="ids-input"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              />
+            </div>
+          </div>
+
+          <fieldset class="mt-4">
+            <legend
+              class="fw-bold mb-3"
+              style="font-size: 0.875rem; color: #334155; float: none; width: auto;"
+            >
+              Select an office
+            </legend>
+
+            <div class="row g-3">
+              <div class="col-12 col-sm-6">
+                <button
+                  type="button"
+                  class="office-choice-card"
+                  data-office="registrar"
+                  aria-pressed="false"
+                >
+                  <span class="office-choice-icon">
+                    <i class="bi bi-building fs-5"></i>
+                  </span>
+                  <span class="office-choice-check" aria-hidden="true">
+                    <i class="bi bi-check" style="font-size: 0.75rem;"></i>
+                  </span>
+                  <span class="d-flex align-items-center justify-content-between w-100 mt-3">
+                    <span class="fw-extrabold" style="font-size: 1rem; font-weight: 800; color: #1b5130;">
+                      Registrar
+                    </span>
+                  </span>
+                  <span class="mt-2" style="font-size: 0.75rem; line-height: 1.5; color: #64748b;">
+                    Enrollment, academic records, and document requests.
+                  </span>
+                </button>
+              </div>
+
+              <div class="col-12 col-sm-6">
+                <button
+                  type="button"
+                  class="office-choice-card"
+                  data-office="cashier"
+                  aria-pressed="false"
+                >
+                  <span class="office-choice-icon">
+                    <i class="bi bi-wallet2 fs-5"></i>
+                  </span>
+                  <span class="office-choice-check" aria-hidden="true">
+                    <i class="bi bi-check" style="font-size: 0.75rem;"></i>
+                  </span>
+                  <span class="d-flex align-items-center justify-content-between w-100 mt-3">
+                    <span class="fw-extrabold" style="font-size: 1rem; font-weight: 800; color: #1b5130;">
+                      Cashier
+                    </span>
+                  </span>
+                  <span class="mt-2" style="font-size: 0.75rem; line-height: 1.5; color: #64748b;">
+                    Tuition payments, official receipts, and cash transactions.
+                  </span>
+                </button>
+              </div>
+            </div>
+          </fieldset>
+
+          <p
+            id="studentFormError"
+            role="alert"
+            class="d-none mt-4 mb-0 rounded-3 px-3 py-2 fw-semibold"
+            style="background-color: #fef2f2; color: #b91c1c; font-size: 0.75rem;"
+          ></p>
+
+          <button id="studentSubmitBtn" type="submit" class="btn-ids-primary w-100 mt-4 py-3">
+            <i class="bi bi-ticket-perforated fs-5"></i>
+            <span>Generate queue number</span>
+          </button>
+
+          <p class="mt-3 mb-0 text-center" style="font-size: 0.6875rem; color: #94a3b8;">
+            Queue tickets are issued via the school queue service.
+          </p>
+        </form>
+      </section>
+
+      <!-- Step 2: Digital Queue Ticket View -->
+      <section id="studentTicketView" class="d-none mx-auto text-center" style="max-width: 28rem;">
+        <div
+          class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3"
+          style="width: 56px; height: 56px; background-color: #d1fae5; color: #047857;"
+        >
+          <i class="bi bi-check-lg fs-3"></i>
+        </div>
+
+        <h1 class="fw-extrabold mb-0" style="font-size: 1.875rem; font-weight: 800; color: #174b2b;">
+          You're in the queue!
+        </h1>
+        <p class="mt-2 mb-0" style="font-size: 0.875rem; color: #64748b;">
+          Keep this ticket and watch the public display.
+        </p>
+
+        <!-- Printable Digital Ticket -->
+        <div class="ticket-shape printable-ticket mt-4 text-center">
+          <div class="px-4 py-4 text-white text-start" style="background-color: #15552f;">
+            <div class="brand-lockup inverted">
+              <img
+                src="../assets/images/ids-colleges-logo.png"
+                alt="IDS Colleges official seal"
+                class="brand-seal"
+              />
+              <div>
+                <p class="brand-title">IDS COLLEGES</p>
+                <p class="brand-subtitle">INFOTECH DEVELOPMENT SYSTEM</p>
+              </div>
+            </div>
+            <p
+              class="mb-0 mt-3 text-uppercase fw-bold"
+              style="font-size: 0.625rem; letter-spacing: 0.2em; color: #bbf7d0;"
+            >
+              Digital queue ticket
+            </p>
+          </div>
+
+          <div class="px-4 py-4">
+            <p
+              class="mb-0 text-uppercase fw-bold"
+              style="font-size: 0.75rem; letter-spacing: 0.18em; color: #94a3b8;"
+            >
+              Your number
+            </p>
+            <p id="ticketNumberDisplay" class="ticket-number-xl tabular-nums mt-2 mb-0">—</p>
+
+            <span id="ticketStatusBadge" class="status-badge waiting mt-3">
+              <span class="rounded-circle d-inline-block" style="width: 8px; height: 8px; background-color: #f59e0b;"></span>
+              <span>WAITING</span>
+            </span>
+
+            <div class="ticket-divider"></div>
+
+            <dl class="mb-0 text-start" style="font-size: 0.875rem;">
+              <div class="d-flex justify-content-between gap-3 mb-3">
+                <dt class="fw-normal mb-0" style="color: #94a3b8;">Student name</dt>
+                <dd id="ticketStudentName" class="fw-bold mb-0 text-end" style="color: #334155;">—</dd>
+              </div>
+              <div class="d-flex justify-content-between gap-3 mb-3">
+                <dt class="fw-normal mb-0" style="color: #94a3b8;">Office</dt>
+                <dd id="ticketOfficeName" class="fw-bold mb-0 text-end" style="color: #334155;">—</dd>
+              </div>
+              <div class="d-flex justify-content-between gap-3 mb-0">
+                <dt class="fw-normal mb-0" style="color: #94a3b8;">Time issued</dt>
+                <dd id="ticketTimeIssued" class="fw-bold tabular-nums mb-0 text-end" style="color: #334155;">—</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="px-4 py-3" style="background-color: #f8fafc; font-size: 0.75rem; color: #64748b;">
+            Please be ready when your number is called.
+          </div>
+        </div>
+
+        <!-- Ticket Actions -->
+        <div class="ticket-actions row g-2 mt-4">
+          <div class="col-12 col-sm-6">
+            <button id="printTicketBtn" type="button" class="btn-ids-primary w-100">
+              <i class="bi bi-printer"></i>
+              <span>Print queue ticket</span>
+            </button>
+          </div>
+          <div class="col-12 col-sm-6">
+            <button id="generateAnotherBtn" type="button" class="btn-ids-outline-green w-100">
+              <span>Generate another</span>
+            </button>
+          </div>
+        </div>
+
+        <p class="ticket-actions mt-3 mb-0" style="font-size: 0.6875rem; line-height: 1.5; color: #94a3b8;">
+          The print dialog will use any queue or thermal printer connected to this device.
+        </p>
+      </section>
+    </main>
+
+    <!-- Bootstrap 5 Bundle & Application Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../js/api/api.js" defer></script>
+    <script src="../js/services/queueService.js" defer></script>
+    <script src="../js/services/authService.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/validation.js" defer></script>
+    <script src="../js/interactions.js" defer></script>
+  </body>
+</html>

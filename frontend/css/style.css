@@ -1,0 +1,229 @@
+/* ==========================================================================
+   IDS Colleges Student Services Queue — Global Stylesheet
+   ========================================================================== */
+
+:root {
+  --ids-green-deep: #15552f;
+  --ids-green-hover: #0f3d24;
+  --ids-green-dark-panel: #124628;
+  --ids-green-display-bg: #0b331d;
+  --ids-green-heading: #174b2b;
+  --ids-green-hero: #123c24;
+  --ids-green-title: #1b5130;
+  --ids-green-accent: #2f8f46;
+  --ids-green-accent-dark: #23713d;
+  --ids-green-accent-mid: #287c40;
+  --ids-green-cta-bright: #39a852;
+  --ids-green-cta-bright-hover: #49b861;
+  --ids-green-soft: #edf7ef;
+  --ids-green-mint: #dff2e4;
+  --ids-green-panel-soft: #f2f8f3;
+
+  --ids-bg-home: #f7f9fc;
+  --ids-bg-student: #f6f8fb;
+  --ids-bg-ticket: #f5f8fc;
+  --ids-bg-staff: #f5f7fa;
+
+  --ids-slate-900: #0f172a;
+  --ids-slate-800: #1e293b;
+  --ids-slate-700: #334155;
+  --ids-slate-600: #475569;
+  --ids-slate-500: #64748b;
+  --ids-slate-400: #94a3b8;
+  --ids-slate-300: #cbd5e1;
+  --ids-slate-200: #e2e8f0;
+  --ids-slate-100: #f1f5f9;
+  --ids-slate-50: #f8fafc;
+
+  --ids-radius-card: 1rem;
+  --ids-radius-hero: 1.7rem;
+  --ids-radius-btn: 0.75rem;
+  --ids-transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--ids-slate-800);
+  background-color: var(--ids-bg-home);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Tabular numerals for queue numbers, counters, and timestamps */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Page Canvas Variants */
+.page-home {
+  background-color: var(--ids-bg-home);
+}
+
+.page-student {
+  background-color: var(--ids-bg-student);
+}
+
+.page-staff {
+  background-color: var(--ids-bg-staff);
+}
+
+.page-display {
+  background-color: var(--ids-green-display-bg);
+  color: #ffffff;
+}
+
+/* Main viewport height excluding sticky 76px header */
+.main-viewport {
+  min-height: calc(100vh - 76px);
+}
+
+/* Hero Architectural Grid & Ambient Glows */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-height: calc(100vh - 76px);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.55;
+  background-image:
+    linear-gradient(#22683b0b 1px, transparent 1px),
+    linear-gradient(90deg, #22683b0b 1px, transparent 1px);
+  background-size: 42px 42px;
+  -webkit-mask-image: linear-gradient(90deg, #000, transparent 85%);
+  mask-image: linear-gradient(90deg, #000, transparent 85%);
+}
+
+.hero-glow-left {
+  position: absolute;
+  left: -8rem;
+  bottom: -14rem;
+  z-index: -1;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  background-color: rgba(220, 252, 231, 0.72);
+  filter: blur(64px);
+  pointer-events: none;
+}
+
+.hero-glow-right {
+  position: absolute;
+  right: -8rem;
+  top: 2rem;
+  z-index: -1;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background-color: rgba(226, 232, 240, 0.72);
+  filter: blur(64px);
+  pointer-events: none;
+}
+
+/* Typography Helpers */
+.ids-kicker {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ids-green-accent);
+}
+
+.ids-heading-hero {
+  font-size: clamp(2.65rem, 5.8vw, 5.1rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  color: var(--ids-green-hero);
+  text-wrap: balance;
+}
+
+.ids-heading-hero .accent {
+  color: var(--ids-green-accent);
+}
+
+.ids-heading-page {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--ids-green-heading);
+  text-wrap: balance;
+}
+
+.ids-lead {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ids-slate-600);
+}
+
+/* Accessibility Focus Ring */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--ids-green-accent);
+  outline-offset: 2px;
+}
+
+/* Thermal Ticket Print Styles */
+@media print {
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .printable-ticket,
+  .printable-ticket * {
+    visibility: visible !important;
+  }
+
+  .printable-ticket {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 80mm !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .printable-ticket::before,
+  .printable-ticket::after,
+  .ticket-actions {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
